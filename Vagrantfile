@@ -40,7 +40,7 @@ Vagrant.configure( VAGRANTFILE_API_VERSION ) do |vagrant_config|
 	    	config.vm.provision :puppet do |puppet|
 			puppet.manifests_path = 'vagrant.d/puppet/manifests'
 			puppet.module_path    = 'vagrant.d/puppet/modules'
-			puppet.options        = ['--verbose', '--debug']
+			#puppet.options        = ['--verbose', '--debug']
 
 			puppet.manifest_file  = "default.pp"
 		end
