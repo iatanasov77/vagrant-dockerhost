@@ -37,7 +37,7 @@ Vagrant.configure( VAGRANTFILE_API_VERSION ) do |vagrant_config|
 		##############################################################################
 		config.vm.provision "shell", path: "vagrant.d/provision/install_puppet.sh"
 		
-	    config.vm.provision :puppet do |puppet|
+	    	config.vm.provision :puppet do |puppet|
 			puppet.manifests_path = 'vagrant.d/puppet/manifests'
 			puppet.module_path    = 'vagrant.d/puppet/modules'
 			puppet.options        = ['--verbose', '--debug']
